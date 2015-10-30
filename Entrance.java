@@ -15,7 +15,7 @@ public class Entrance implements Runnable {
 
     @Override
     public void run() {
-        while (true) { /// nope nope nope
+        while (true) { /// nope nope nope https://docs.oracle.com/javase/tutorial/essential/concurrency/guardmeth.html
             if (entranceQueue.peek() != null) {
                 if (parkingLot.park(entranceQueue.peek())) {
                     entranceQueue.poll();
